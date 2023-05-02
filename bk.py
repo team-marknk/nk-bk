@@ -2,6 +2,8 @@ import random
 
 def bulls_and_cows():
     print('Let\'s play Bulls and Cows game!!')
+    print('If you want to quit this game, type \'exit\' whenever you want.')
+    print('*'*60)
     answer = random.sample(range(1, 9+1), 4)
     input_nums = ''
     try_count = 0
@@ -10,8 +12,19 @@ def bulls_and_cows():
     # print(answer)
     
     while answer != input_nums:
-        input_nums = [int(i) for i in input('Input 4 numbers: ')]
+        input_ori = input('Input 4 numbers: ')
+        if input_ori == 'exit':
+            return 'Quit this game. byebye~'
+        elif input_ori.isdigit() == False:
+            print('!!!!Input 4 different nums!!!!')
+            continue
         
+        input_nums = [int(i) for i in input_ori]
+        print(input_nums)
+        if len(set(input_nums)) != 4:
+            print('!!!!Input 4 different nums!!!!')
+            continue
+
         bulls = 0
         cows = 0
         
