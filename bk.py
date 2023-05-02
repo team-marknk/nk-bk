@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+#hihi
+print(1)
+=======
 import random
 
 def generate_num(): #4자리수 숫자 생성
@@ -40,4 +44,5 @@ if __name__ == '__main__':
             break
 
 
+>>>>>>> fetch_HEAD
 
