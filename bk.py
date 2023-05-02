@@ -1,0 +1,3 @@
+#hihi
+print(1)
+
